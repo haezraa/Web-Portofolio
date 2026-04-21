@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Akbar Hezra — Full Stack Web Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          mono: ['Fira Code', 'monospace'],
+          playfair: ['"Playfair Display"', 'serif'],
+          space: ['"Space Grotesk"', 'sans-serif'],
+        },
+        colors: {
+          bgBase: '#F7F5F0',
+          textMain: '#111110',
+          textMuted: '#787870',
+          borderMain: '#E4E1D8',
+          bgCard: '#FFFFFF',
+          bgBadge: '#EFECE5',
+        },
+        keyframes: {
+          fadeUp: {
+            '0%': { opacity: 0, transform: 'translateY(22px)' },
+            '100%': { opacity: 1, transform: 'translateY(0)' }
+          }
+        },
+        animation: {
+          fadeUp: 'fadeUp 0.8s ease both'
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #C8C4BB; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #9E9A92; }
+  * { scrollbar-width: thin; scrollbar-color: #C8C4BB transparent; }
+</style>
+</head>
+<body class="antialiased bg-bgBase text-textMain text-[15px] leading-relaxed overflow-x-hidden">
+
+<nav id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md border border-borderMain rounded-full px-5 h-[50px] flex items-center z-[300] shadow-[0_2px_24px_rgba(0,0,0,0.07)] whitespace-nowrap">
+  <ul class="flex gap-1 list-none items-center m-0 p-0">
+    <li><a href="#hero"     class="nav-link text-[#666] text-sm font-normal px-4 py-1.5 rounded-full transition-all duration-200 tracking-wide block hover:bg-bgBase" data-section="hero">Overview</a></li>
+    <li><a href="#about"    class="nav-link text-[#666] text-sm font-normal px-4 py-1.5 rounded-full transition-all duration-200 tracking-wide block hover:bg-bgBase" data-section="about">About</a></li>
+    <li><a href="#skills"   class="nav-link text-[#666] text-sm font-normal px-4 py-1.5 rounded-full transition-all duration-200 tracking-wide block hover:bg-bgBase" data-section="skills">Skills</a></li>
+    <li><a href="#projects" class="nav-link text-[#666] text-sm font-normal px-4 py-1.5 rounded-full transition-all duration-200 tracking-wide block hover:bg-bgBase" data-section="projects">Projects</a></li>
+    <li><a href="#contact"  class="nav-link text-[#666] text-sm font-normal px-4 py-1.5 rounded-full transition-all duration-200 tracking-wide block hover:bg-bgBase" data-section="contact">Contacts</a></li>
+  </ul>
+</nav>
+
+<section id="hero" class="min-h-screen flex items-center justify-center px-6 md:px-12 pt-28 pb-12 bg-bgBase">
+  <div class="bg-bgCard border border-borderMain rounded-[24px] p-8 md:p-14 max-w-[1000px] w-full shadow-[0_4px_40px_rgba(0,0,0,0.05)] animate-fadeUp flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
+    
+    <div class="flex-1 text-center md:text-left">
+      <h1 class="font-space text-4xl md:text-[clamp(2.8rem,5vw,4.5rem)] leading-tight md:leading-[1.1] tracking-[-0.03em] text-textMain font-bold mb-4">
+        Muhammad<br class="hidden md:block"> Akbar Hezra
+      </h1>
+      
+      <p class="text-[15px] text-textMuted max-w-[480px] leading-[1.8] font-light mx-auto md:mx-0">
+        Software Engineering student passionate about web development, focused on building clean, efficient, and impactful digital solutions.
+      </p>
+    </div>
+
+    <div class="flex-shrink-0">
+      <img src="https://via.placeholder.com/400" alt="Akbar Hezra" class="w-56 h-56 md:w-72 md:h-72 object-cover rounded-2xl border border-borderMain shadow-sm transition-transform duration-500 hover:scale-[1.02]">
+    </div>
+
+  </div>
+</section>
+
+<section id="about" class="max-w-[1000px] mx-auto py-24 px-8 md:px-12 border-t border-borderMain">
+  <div class="text-center mb-14">
+    <span class="inline-block text-[11px] tracking-[0.14em] uppercase text-textMuted bg-bgBadge px-4 py-1.5 rounded-full font-medium mb-5 border border-borderMain">Get to know me</span>
+    <h2 class="font-playfair text-4xl md:text-5xl text-textMain tracking-[-0.02em] font-extrabold mb-2">About Me</h2>
+    <p class="text-sm text-textMuted font-light">Passionate about building elegant web experiences</p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+    <div class="bg-[#F0EDE6] border border-borderMain rounded-[14px] p-7 font-mono text-[13px] leading-[1.9] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[#C5C0B5]">
+      <div class="flex gap-[6px] mb-5">
+        <div class="w-3 h-3 rounded-full bg-[#F4887B]"></div>
+        <div class="w-3 h-3 rounded-full bg-[#F6C153]"></div>
+        <div class="w-3 h-3 rounded-full bg-[#62C554]"></div>
+      </div>
+      <div>
+        <span class="text-[#7C5CBF]">const</span> <span class="text-[#3B82C4]">akbar</span>: <span class="text-[#3B82C4]">Developer</span> = {<br>
+        &nbsp;&nbsp;<span class="text-[#2D8A4E]">name</span>: <span class="text-[#B06A2B]">"Akbar Hezra"</span>,<br>
+        &nbsp;&nbsp;<span class="text-[#2D8A4E]">role</span>: <span class="text-[#B06A2B]">"Full Stack Developer"</span>,<br>
+        &nbsp;&nbsp;<span class="text-[#2D8A4E]">passion</span>: <span class="text-[#B06A2B]">"Web Development"</span>,<br>
+        };
+      </div>
+    </div>
+    
+    <div>
+      <p class="text-textMuted leading-[1.85] text-[14.5px] font-light mb-4">Hello! I'm Muhammad Akbar Hezra, a Full Stack Developer who enjoys transforming ideas and challenges into well-structured, efficient, and polished digital solutions.</p>
+      <p class="text-textMuted leading-[1.85] text-[14.5px] font-light mb-4">Currently pursuing Software Engineering, I have a strong focus on web development. I aim to write code that is clear, scalable, and easy to maintain, while also designing interfaces that are engaging and comfortable for users to interact with.</p>
+      <p class="text-textMuted leading-[1.85] text-[14.5px] font-light">In every project, I blend technical understanding with a thoughtful approach to problem-solving, striving to create applications that are not only functional, but also meaningful and impactful.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="max-w-[1000px] mx-auto py-24 px-8 md:px-12 border-t border-borderMain">
+  <div class="text-center mb-14">
+    <span class="inline-block text-[11px] tracking-[0.14em] uppercase text-textMuted bg-bgBadge px-4 py-1.5 rounded-full font-medium mb-5 border border-borderMain">What I work with</span>
+    <h2 class="font-playfair text-4xl md:text-5xl text-textMain tracking-[-0.02em] font-extrabold mb-2">Skills & Technologies</h2>
+    <p class="text-sm text-textMuted font-light">A comprehensive toolkit for building modern, scalable applications</p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-bgCard border border-borderMain rounded-2xl p-7 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[#C5C0B5]">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-9 h-9 rounded-lg bg-bgBase border border-borderMain flex items-center justify-center text-[#555]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </div>
+        <span class="text-sm font-semibold text-textMain">Programming Languages</span>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="w-3.5 h-3.5" alt="TS" /> TypeScript
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="w-3.5 h-3.5" alt="JS" /> JavaScript
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" class="w-3.5 h-3.5" alt="PHP" /> PHP
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="w-3.5 h-3.5" alt="Java" /> Java
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="w-3.5 h-3.5" alt="HTML" /> HTML
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="w-3.5 h-3.5" alt="CSS" /> CSS
+        </span>
+      </div>
+    </div>
+
+    <div class="bg-bgCard border border-borderMain rounded-2xl p-7 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[#C5C0B5]">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-9 h-9 rounded-lg bg-bgBase border border-borderMain flex items-center justify-center text-[#555]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        </div>
+        <span class="text-sm font-semibold text-textMain">Frameworks</span>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="w-3.5 h-3.5" alt="React" /> React
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="w-3.5 h-3.5" alt="Laravel" /> Laravel
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" class="w-3.5 h-3.5" alt="Tailwind" /> Tailwind CSS
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" class="w-3.5 h-3.5" alt="Bootstrap" /> Bootstrap
+        </span>
+      </div>
+    </div>
+
+    <div class="bg-bgCard border border-borderMain rounded-2xl p-7 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[#C5C0B5]">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-9 h-9 rounded-lg bg-bgBase border border-borderMain flex items-center justify-center text-[#555]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </div>
+        <span class="text-sm font-semibold text-textMain">Languages</span>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          🇮🇩 Bahasa Indonesia
+        </span>
+        <span class="flex items-center gap-1.5 text-[12.5px] text-textMain bg-bgBase border border-borderMain rounded-lg px-3 py-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          🇬🇧 English
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="max-w-[1000px] mx-auto pt-24 pb-8 px-8 md:px-12 border-t border-borderMain">
+  <div class="text-center mb-14">
+    <span class="inline-block text-[11px] tracking-[0.14em] uppercase text-textMuted bg-bgBadge px-4 py-1.5 rounded-full font-medium mb-5 border border-borderMain">My Work</span>
+    <h2 class="font-playfair text-4xl md:text-5xl text-textMain tracking-[-0.02em] font-extrabold mb-2">Last Projects</h2>
+    <p class="text-sm text-textMuted font-light">A selection of projects that showcase my skills and passion for development</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-14 items-center mb-20 group">
+    <div class="bg-bgBadge border border-borderMain rounded-2xl h-[260px] flex items-center justify-center font-mono italic text-[13px] text-[#9E9A92] overflow-hidden transition-all duration-500 group-hover:shadow-lg group-hover:border-[#C5C0B5]">
+      Preview Screenshot
+    </div>
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.1em] text-[#2D6A4A] font-medium mb-2">Full Stack · Point of Sale</p>
+      <h3 class="font-bold text-3xl text-textMain mb-3 leading-tight">Rizki Rental</h3>
+      <p class="text-[13.5px] text-textMuted leading-relaxed mb-5 font-light">Full-stack project for PlayStation rental business digitization, featuring automated session tracking, billing, and inventory management.</p>
+      <div class="flex gap-2 flex-wrap mb-6">
+        <span class="flex items-center gap-1 text-[11px] px-3 py-1.5 bg-bgBase border border-borderMain rounded-full text-textMain transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" class="w-3 h-3" alt="Laravel" /> Laravel
+        </span>
+        <span class="flex items-center gap-1 text-[11px] px-3 py-1.5 bg-bgBase border border-borderMain rounded-full text-textMain transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" class="w-3 h-3" alt="Tailwind" /> Tailwind
+        </span>
+        <span class="flex items-center gap-1 text-[11px] px-3 py-1.5 bg-bgBase border border-borderMain rounded-full text-textMain transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="w-3 h-3" alt="MySQL" /> MySQL
+        </span>
+      </div>
+      <a href="#" class="inline-flex items-center gap-2 bg-textMain text-bgBase text-[13px] font-medium px-6 py-3 rounded-full transition-all duration-300 hover:bg-[#1A3A2A] hover:shadow-md hover:-translate-y-0.5">
+        Learn More &rarr;
+      </a>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-[1fr_1.1fr] gap-14 items-center mb-10 group">
+    <div class="order-2 md:order-1">
+      <p class="text-[11px] uppercase tracking-[0.1em] text-[#2D6A4A] font-medium mb-2">Front End · Portofolio Web</p>
+      <h3 class="font-bold text-3xl text-textMain mb-3 leading-tight">Website Portofolio</h3>
+      <p class="text-[13.5px] text-textMuted leading-relaxed mb-5 font-light">A personal portfolio website built to showcase my web development projects, skills, and professional journey. Designed with a clean, modern, and responsive interface.</p>
+      <div class="flex gap-2 flex-wrap mb-6">
+        <span class="flex items-center gap-1 text-[11px] px-3 py-1.5 bg-bgBase border border-borderMain rounded-full text-textMain transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="w-3 h-3" alt="HTML" /> HTML
+        </span>
+        <span class="flex items-center gap-1 text-[11px] px-3 py-1.5 bg-bgBase border border-borderMain rounded-full text-textMain transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="w-3 h-3" alt="CSS" /> CSS
+        </span>
+        <span class="flex items-center gap-1 text-[11px] px-3 py-1.5 bg-bgBase border border-borderMain rounded-full text-textMain transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="w-3 h-3" alt="JavaScript" /> JavaScript
+        </span>
+        <span class="flex items-center gap-1 text-[11px] px-3 py-1.5 bg-bgBase border border-borderMain rounded-full text-textMain transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm hover:bg-white cursor-pointer">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" class="w-3 h-3" alt="Tailwind" /> Tailwind CSS
+        </span>
+      </div>
+      <a href="#" class="inline-flex items-center gap-2 bg-textMain text-bgBase text-[13px] font-medium px-6 py-3 rounded-full transition-all duration-300 hover:bg-[#1A3A2A] hover:shadow-md hover:-translate-y-0.5">
+        Learn More &rarr;
+      </a>
+    </div>
+    <div class="order-1 md:order-2 bg-bgBadge border border-borderMain rounded-2xl h-[260px] flex items-center justify-center font-mono italic text-[13px] text-[#9E9A92] overflow-hidden transition-all duration-500 group-hover:shadow-lg group-hover:border-[#C5C0B5]">
+      Preview Screenshot
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="max-w-[1000px] mx-auto pt-32 pb-24 px-8 md:px-12 border-t border-borderMain min-h-[80vh]">
+  <div class="mb-10">
+    <h2 class="font-space text-4xl md:text-[2.8rem] font-bold text-textMain mb-2 tracking-[-0.02em]">Let's work together</h2>
+    <p class="text-sm text-textMuted font-light">Available for freelance projects and collaborations.</p>
+  </div>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <a href="mailto:akbarhezra@gmail.com" class="bg-bgCard border border-borderMain rounded-[14px] p-6 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#C5C0B5]">
+      <div class="w-11 h-11 rounded-full bg-bgBase border border-borderMain flex items-center justify-center transition-colors duration-300">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#111110"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <div>
+        <span class="text-[15px] font-semibold text-textMain block mb-1">Email</span>
+        <span class="text-[12.5px] text-textMuted block mb-3 font-light">Reach out directly.</span>
+        <span class="text-[13px] text-textMain font-semibold block">akbarhezra@gmail.com</span>
+      </div>
+    </a>
+
+    <a href="https://github.com/" target="_blank" class="bg-bgCard border border-borderMain rounded-[14px] p-6 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#C5C0B5]">
+      <div class="w-11 h-11 rounded-full bg-bgBase border border-borderMain flex items-center justify-center transition-colors duration-300">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#111110"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+      </div>
+      <div>
+        <span class="text-[15px] font-semibold text-textMain block mb-1">GitHub</span>
+        <span class="text-[12.5px] text-textMuted block mb-3 font-light">Reach out directly.</span>
+        <span class="text-[13px] text-textMain font-semibold block">View repositories</span>
+      </div>
+    </a>
+
+    <a href="https://instagram.com/" target="_blank" class="bg-bgCard border border-borderMain rounded-[14px] p-6 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#C5C0B5]">
+      <div class="w-11 h-11 rounded-full bg-bgBase border border-borderMain flex items-center justify-center transition-colors duration-300">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#111110"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </div>
+      <div>
+        <span class="text-[15px] font-semibold text-textMain block mb-1">Instagram</span>
+        <span class="text-[12.5px] text-textMuted block mb-3 font-light">Reach out directly.</span>
+        <span class="text-[13px] text-textMain font-semibold block">Follow me</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer class="max-w-[1000px] mx-auto py-8 px-8 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-borderMain">
+  <span class="text-xs text-textMuted">© 2026 Muhammad Akbar Hezra</span>
+  <div class="flex gap-6">
+    <a href="#" class="text-xs text-textMuted uppercase tracking-[0.06em] hover:text-textMain transition-colors">GitHub</a>
+    <a href="#" class="text-xs text-textMuted uppercase tracking-[0.06em] hover:text-textMain transition-colors">LinkedIn</a>
+    <a href="#" class="text-xs text-textMuted uppercase tracking-[0.06em] hover:text-textMain transition-colors">Email</a>
+  </div>
+</footer>
+
+<script>
+  const sections = ['hero','about','skills','projects','contact'];
+  const links = document.querySelectorAll('.nav-link');
+
+  function setActive(id) {
+    links.forEach(a => {
+      if (a.dataset.section === id) {
+        a.classList.remove('text-[#666]', 'font-normal');
+        a.classList.add('bg-bgBadge', 'text-textMain', 'font-medium');
+      } else {
+        a.classList.remove('bg-bgBadge', 'text-textMain', 'font-medium');
+        a.classList.add('text-[#666]', 'font-normal');
+      }
+    });
+  }
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+  sections.forEach(id => { 
+    const el = document.getElementById(id); 
+    if (el) io.observe(el); 
+  });
+</script>
+
+</body>
+</html>
